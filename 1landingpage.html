@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build a High-Performance Website That Grows Your Business | Professional Web Development Services</title>
+  <meta name="description" content="Professional web development services for businesses. Get a high-performance, SEO-optimized website design that drives growth and online success." />
+  <meta name="keywords" content="web development, website design, SEO optimization, business website, professional web development, responsive web design, web agency" />
+  <meta name="author" content="TechNova" />
+  <link rel="canonical" href="https://www.technova.com/" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Build a High-Performance Website That Grows Your Business" />
+  <meta property="og:description" content="Professional web development services for businesses. Get a high-performance, SEO-optimized website design that drives growth and online success." />
+  <meta property="og:url" content="https://www.technova.com/" />
+  <meta property="og:site_name" content="TechNova" />
+  <meta property="og:image" content="https://www.technova.com/assets/og-image.jpg" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Build a High-Performance Website That Grows Your Business" />
+  <meta name="twitter:description" content="Professional web development services for businesses. Get a high-performance, SEO-optimized website design that drives growth and online success." />
+  <meta name="twitter:site" content="@technova" />
+  <meta name="twitter:image" content="https://www.technova.com/assets/og-image.jpg" />
+
+  <!-- Preload Key Assets -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" as="style" />
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
+  <link rel="preload" href="https://www.technova.com/assets/og-image.jpg" as="image" imagesrcset="https://www.technova.com/assets/og-image.jpg 1200w" imagesizes="100vw" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Structured Data: Organization & WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TechNova",
+    "url": "https://www.technova.com/",
+    "logo": "https://www.technova.com/assets/logo.png",
+    "sameAs": [
+      "https://twitter.com/technova",
+      "https://www.linkedin.com/company/technova",
+      "https://github.com/technova"
+    ],
+    "description": "Professional web development and website design services for businesses. SEO optimization and high-performance web solutions."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TechNova",
+    "url": "https://www.technova.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.technova.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Custom Styles for Accessibility & Performance -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(135deg, #eef2ff 0%, #f5f7fa 100%);
+      color: #1e293b;
+    }
+    /* Custom scrollbar for elegance */
+    ::-webkit-scrollbar {
+      width: 8px;
+      background: #e0e7ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #6366f1;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="antialiased bg-gradient-to-br from-indigo-50 via-white to-violet-100">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-indigo-100 transition-all duration-300 shadow-none">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center gap-2 font-extrabold text-2xl text-indigo-700 tracking-tight">
+        <span class="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">TechNova</span>
+      </a>
+      <ul class="hidden md:flex gap-8 font-semibold text-slate-700 text-base">
+        <li><a href="#home" class="hover:text-indigo-600 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-indigo-600 transition">About</a></li>
+        <li><a href="#services" class="hover:text-indigo-600 transition">Services</a></li>
+        <li><a href="#portfolio" class="hover:text-indigo-600 transition">Portfolio</a></li>
+        <li><a href="#contact" class="hover:text-indigo-600 transition">Contact</a></li>
+      </ul>
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="md:hidden flex items-center text-indigo-700 focus:outline-none" aria-label="Open Menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-white/95 z-50 flex flex-col items-center justify-center gap-8 text-xl font-semibold text-slate-700 hidden">
+      <button id="close-menu" class="absolute top-6 right-6 text-indigo-700" aria-label="Close Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <a href="#home" class="hover:text-indigo-600 transition" onclick="closeMenu()">Home</a>
+      <a href="#about" class="hover:text-indigo-600 transition" onclick="closeMenu()">About</a>
+      <a href="#services" class="hover:text-indigo-600 transition" onclick="closeMenu()">Services</a>
+      <a href="#portfolio" class="hover:text-indigo-600 transition" onclick="closeMenu()">Portfolio</a>
+      <a href="#contact" class="hover:text-indigo-600 transition" onclick="closeMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative pt-32 md:pt-40 pb-20 bg-gradient-to-br from-indigo-600 via-indigo-500 to-violet-600 overflow-hidden">
+    <!-- Abstract background pattern -->
+    <div class="absolute inset-0 pointer-events-none">
+      <svg class="absolute left-1/2 top-0 -translate-x-1/2 opacity-30" width="1200" height="600" fill="none">
+        <ellipse cx="600" cy="300" rx="600" ry="300" fill="url(#grad1)"/>
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="1200" y2="600" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a5b4fc"/>
+            <stop offset="1" stop-color="#c7d2fe"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+      <div class="flex-1 text-center md:text-left" data-aos="fade-right">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+          Empowering Businesses<br class="hidden md:block"/> with <span class="bg-gradient-to-r from-indigo-200 via-white to-violet-200 bg-clip-text text-transparent">Digital Innovation</span>
+        </h1>
+        <p class="text-lg md:text-xl text-indigo-100 mb-8 font-medium max-w-xl">
+          We build reliable, scalable, and intelligent web solutions for the future.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#contact" class="inline-block px-8 py-3 rounded-2xl bg-white text-indigo-700 font-bold text-lg shadow-lg hover:bg-indigo-100 transition-all duration-200">Get Started</a>
+          <a href="#contact" class="inline-block px-8 py-3 rounded-2xl border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-indigo-700 transition-all duration-200">Contact Sales</a>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center md:justify-end" data-aos="fade-left">
+        <img src="https://cdn.pixabay.com/photo/2020/03/04/23/57/concept-4903028_1280.jpg" alt="Digital Innovation" class="w-[380px] max-w-full rounded-2xl shadow-2xl"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-6">About TechNova</h2>
+        <p class="text-lg text-slate-700 mb-4">
+          TechNova is a forward-thinking technology partner, dedicated to delivering world-class digital solutions for businesses of all sizes. Since 2015, we have empowered startups, enterprises, and global brands to accelerate their digital transformation.
+        </p>
+        <p class="text-base text-slate-500">
+          Our team of passionate engineers, designers, and strategists combine innovation with best-in-class technology to help you achieve your business goals and stay ahead in a rapidly evolving digital landscape.
+        </p>
+      </div>
+      <div class="flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80" alt="About TechNova" class="rounded-2xl shadow-xl w-[400px] max-w-full"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-gradient-to-br from-indigo-50 via-white to-violet-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-12" data-aos="fade-up">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service Card 1 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-indigo-100 rounded-full p-4 mb-5 group-hover:bg-indigo-600 group-hover:text-white transition">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="3" y="3" width="18" height="4" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl text-indigo-700 mb-2">Web Development</h3>
+          <p class="text-slate-600">Custom, scalable, and high-performance web applications tailored to your business needs.</p>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-indigo-100 rounded-full p-4 mb-5 group-hover:bg-indigo-600 group-hover:text-white transition">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M7 16V4a1 1 0 011-1h8a1 1 0 011 1v12" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="3" y="16" width="18" height="4" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl text-indigo-700 mb-2">Cloud Integration</h3>
+          <p class="text-slate-600">Seamless integration with cloud platforms for agility, scalability, and security.</p>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-indigo-100 rounded-full p-4 mb-5 group-hover:bg-indigo-600 group-hover:text-white transition">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M9 17v-2a4 4 0 018 0v2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl text-indigo-700 mb-2">Data Analytics</h3>
+          <p class="text-slate-600">Transform data into actionable insights with advanced analytics and dashboards.</p>
+        </div>
+        <!-- Service Card 4 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-indigo-100 rounded-full p-4 mb-5 group-hover:bg-indigo-600 group-hover:text-white transition">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-xl text-indigo-700 mb-2">AI Automation</h3>
+          <p class="text-slate-600">Leverage artificial intelligence to automate processes and drive innovation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-12" data-aos="fade-up">Our Portfolio</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Project 1" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-indigo-900/80 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+            <h3 class="text-white text-xl font-bold mb-2">FinTech Dashboard</h3>
+            <p class="text-indigo-100 text-base text-center">A scalable analytics dashboard for a leading financial startup.</p>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Project 2" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-indigo-900/80 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+            <h3 class="text-white text-xl font-bold mb-2">E-Commerce Platform</h3>
+            <p class="text-indigo-100 text-base text-center">Robust, cloud-native e-commerce solution for global retail.</p>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Project 3" class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-indigo-900/80 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+            <h3 class="text-white text-xl font-bold mb-2">AI Chatbot Suite</h3>
+            <p class="text-indigo-100 text-base text-center">Conversational AI for customer support and automation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-24 bg-gradient-to-br from-indigo-50 via-white to-violet-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-12" data-aos="fade-up">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1" class="w-16 h-16 rounded-full mb-4 border-4 border-indigo-100"/>
+          <p class="text-slate-700 mb-4 italic">"TechNova delivered our project on time with exceptional quality. Their team is highly professional and innovative."</p>
+          <div>
+            <span class="font-bold text-indigo-700">Michael Lee</span>
+            <span class="block text-sm text-slate-500">CTO, FinEdge</span>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 2" class="w-16 h-16 rounded-full mb-4 border-4 border-indigo-100"/>
+          <p class="text-slate-700 mb-4 italic">"Their cloud integration expertise helped us scale rapidly. We highly recommend TechNova for any tech project."</p>
+          <div>
+            <span class="font-bold text-indigo-700">Sarah Kim</span>
+            <span class="block text-sm text-slate-500">CEO, Shoply</span>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Client 3" class="w-16 h-16 rounded-full mb-4 border-4 border-indigo-100"/>
+          <p class="text-slate-700 mb-4 italic">"The AI automation solutions from TechNova transformed our business operations. Outstanding support!"</p>
+          <div>
+            <span class="font-bold text-indigo-700">David Chen</span>
+            <span class="block text-sm text-slate-500">COO, NextGenAI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-8" data-aos="fade-up">Contact Us</h2>
+      <p class="text-center text-slate-600 mb-10" data-aos="fade-up" data-aos-delay="100">
+        Ready to start your digital journey? Fill out the form and our team will get back to you soon.
+      </p>
+      <form class="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl shadow-xl p-8 flex flex-col gap-6" data-aos="fade-up" data-aos-delay="200" autocomplete="off" onsubmit="return handleSubmit(event)">
+        <div class="flex flex-col gap-2">
+          <label for="name" class="font-semibold text-slate-700">Name</label>
+          <input id="name" name="name" type="text" required class="rounded-2xl px-5 py-3 border border-indigo-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 outline-none transition-all text-slate-700 bg-white"/>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="email" class="font-semibold text-slate-700">Email</label>
+          <input id="email" name="email" type="email" required class="rounded-2xl px-5 py-3 border border-indigo-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 outline-none transition-all text-slate-700 bg-white"/>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="message" class="font-semibold text-slate-700">Message</label>
+          <textarea id="message" name="message" rows="4" required class="rounded-2xl px-5 py-3 border border-indigo-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 outline-none transition-all text-slate-700 bg-white resize-none"></textarea>
+        </div>
+        <button type="submit" class="mt-2 px-8 py-3 rounded-2xl bg-indigo-600 text-white font-bold text-lg shadow-lg hover:bg-indigo-700 transition-all duration-200 focus:scale-95 active:scale-95">
+          Send Message
+        </button>
+        <p id="form-success" class="hidden text-green-600 text-center font-semibold mt-2">Thank you! We'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-700 to-violet-700 text-white py-10 mt-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2 font-extrabold text-2xl">
+        <span class="bg-gradient-to-r from-indigo-200 to-violet-200 bg-clip-text text-transparent">TechNova</span>
+      </div>
+      <div class="flex gap-6 text-lg">
+        <a href="#" class="hover:text-indigo-200 transition" aria-label="Twitter">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.13 12.13 0 013 4.8a4.28 4.28 0 001.32 5.71c-.7-.02-1.36-.21-1.94-.53v.05a4.28 4.28 0 003.43 4.2c-.33.09-.68.14-1.04.14-.25 0-.5-.02-.74-.07a4.29 4.29 0 004 2.98A8.6 8.6 0 012 19.54a12.13 12.13 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.7 8.7 0 0024 4.59a8.5 8.5 0 01-2.54.7z"/>
+          </svg>
+        </a>
+        <a href="#" class="hover:text-indigo-200 transition" aria-label="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.58v4.75z"/>
+          </svg>
+        </a>
+        <a href="#" class="hover:text-indigo-200 transition" aria-label="GitHub">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.2 1.18a11.1 11.1 0 012.92-.39c.99.01 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.08.79 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="text-sm text-indigo-100 text-center md:text-right">
+        &copy; 2024 TechNova. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 900,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+
+    // Sticky Navbar Shadow
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('shadow-lg', 'bg-white/95');
+      } else {
+        navbar.classList.remove('shadow-lg', 'bg-white/95');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    closeMenuBtn.addEventListener('click', closeMenu);
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.length > 1 && document.querySelector(href)) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Contact form handler (demo only)
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('form-success').classList.add('hidden');
+        e.target.reset();
+      }, 3000);
+      return false;
+    }
+  </script>
+</body>
+</html>
